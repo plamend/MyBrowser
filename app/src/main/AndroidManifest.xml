@@ -17,15 +17,13 @@
             android:name=".MyBrowserActivity"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.APP_BROWSER"/>
-                <data android:scheme="URL"/>
-                <data android:mimeType="http"/>
+
             </intent-filter>
   
             <!-- TODO - Add necessary intent filter information so that this
