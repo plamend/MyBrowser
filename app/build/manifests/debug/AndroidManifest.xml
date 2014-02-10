@@ -1,0 +1,26 @@
+<!-- From: file:/C:/android%20projects/MyBrowser/app/src/main/AndroidManifest.xml --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="course.labs.intentslab.mybrowser">
+
+    <uses-sdk android:minSdkVersion="13" android:targetSdkVersion="18"/>
+
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
+        <activity android:label="@string/app_name" android:name="course.labs.intentslab.mybrowser.MyBrowserActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.APP_BROWSER"/>
+                <data android:scheme="URL"/>
+                <data android:mimeType="http"/>
+            </intent-filter>
+  
+            <!-- TODO - Add necessary intent filter information so that this
+            			    Activity will accept Intents with the 
+            			    action "android.intent.action.VIEW" and with an "http" 
+            			    schemed URL -->
+        </activity>
+    </application>
+
+</manifest>
